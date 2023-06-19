@@ -34,3 +34,5 @@ button.grid(row=1,column=1)
 
 # 显示窗口
 root.mainloop()
+
+# 版本测试
