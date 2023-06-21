@@ -4,7 +4,9 @@ from tkinter import messagebox
 def func():
     result = entry.get()  # 获取文本输入框的内容
     print(result) 
-
+def funcdel():
+    result = entry.delete(0, END)# 删除文本输入框的内容
+    
 # 创建窗口：实例化一个窗口对象。
 root = Tk()
 
@@ -31,6 +33,9 @@ entry.grid()
 # 添加点击按钮
 button = Button(root,text="确定",font=("宋体",25),fg="blue",command=func)
 button.grid(row=1,column=1)
+
+button = Button(root,text="取消",font=("宋体",25),fg="blue",command=funcdel)
+button.grid(row=1,column=2)
 
 # 显示窗口
 root.mainloop()
