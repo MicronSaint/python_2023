@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
  
 def func():
-    result = entry.get("1.0", "end")  # 获取文本输入框的内容
+    result = entry.get()  # 获取文本输入框的内容
     print(result) 
 
 # 创建窗口：实例化一个窗口对象。
@@ -29,10 +29,8 @@ entry = Entry(root,font=("宋体",25),fg="black")
 entry.grid()
 
 # 添加点击按钮
-button = Button(root,text="签名设计",font=("宋体",25),fg="blue",command=func)
+button = Button(root,text="确定",font=("宋体",25),fg="blue",command=func)
 button.grid(row=1,column=1)
 
 # 显示窗口
 root.mainloop()
-
-# 版本测试
