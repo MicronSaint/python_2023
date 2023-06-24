@@ -1,9 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
- 
+import math, time
 import time
-
-
 import threading
 
 def func():
@@ -48,7 +46,7 @@ button.grid(row=3,column=9)
 
 
 clock = Label(root,text='',font=28)
-clock.place(x=15, y=240)
+clock.place(x=25, y=240)
 
 def get_time():
      while True:
@@ -61,4 +59,41 @@ thread.setDaemon(True)
 thread.start()
 
 # 显示窗口
-root.mainloop()
+#root.mainloop()
+class MainPage(object):
+    def __init__(self, master=None):
+        self.root = master  # 定义内部变量root
+        self.root.geometry('%dx%d' % (600, 400))  # 设置窗口大小
+        self.createPage()
+ 
+    def createPage(self):
+        self.clockPage = clockPage(self.root)  # 创建不同Frame
+        #self.weatherPage = weatherPage(self.root)
+        self.clockPage.pack()  # 默认显示数据录入界面
+        menubar = Menu(self.root)
+        menubar.add_command(label='时钟', command=self.clockShow)
+        menubar.add_command(label='天气', command=self.weatherShow)
+        self.root['menu'] = menubar  # 设置菜单栏
+ 
+    def clockShow(self):
+        self.clockPage.pack()
+        self.weatherPage.pack_forget()
+ 
+    def weatherShow(self):
+        self.clockPage.pack_forget()
+        #self.weatherPage.pack()
+        
+# 主函数
+def main():
+    #root = tk.Tk()
+    #page = MainPage(root)
+ 
+    # 开启时钟刷新
+    #page.clockPage.update()
+ 
+    #开启界面
+    root.mainloop()
+ 
+ 
+if __name__ == '__main__':
+    main()
