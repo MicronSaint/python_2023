@@ -6,7 +6,7 @@ import json
 url = "http://apis.juhe.cn/simpleWeather/query" # 路径
 #设置参数
 params = {
-     "city": "长沙",
+     "city": "沈阳",
      "key": "fb44de1e6bee842dd3bf0d60073a8178"
 }
  
@@ -24,4 +24,4 @@ def getWeather():
     return obj
  
 # 用于测试结果
-print(getWeather())
+#print(getWeather())
