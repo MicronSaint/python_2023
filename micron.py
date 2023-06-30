@@ -3,6 +3,7 @@ from tkinter import messagebox
 from pageFrames import *
 from mainWindow import *
 from mainPage import *
+from sqlite import *
 
 # 主函数
 def main():
@@ -23,6 +24,8 @@ def main():
 
     #page.mainWindow.createPage()
  
+    sqlite()
+    
     # 开启界面
     root.mainloop()
  

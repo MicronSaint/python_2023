@@ -91,7 +91,7 @@ class weatherPage(Frame):
         self.createPage()
  
     def createPage(self):
-        Label(self, text='天气页面,还没有设计怎么做UI').pack()
+        Label(self, text='天气').pack()
         obj = getWeather()
         if obj['error_code']:
             Label(self, text=obj['reason']).pack()

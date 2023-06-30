@@ -6,8 +6,6 @@ import time
 import threading
 import matplotlib
 
-
-
 class mainWindow(Frame):
     def __init__(self, master=None):
         Frame.__init__(self, master)
@@ -18,7 +16,7 @@ class mainWindow(Frame):
     def createPage(self):
         clock = Label(self,text='',font=28)
         clock.pack()
-        #clock.place(x=25, y=240)
+        clock.place(x=25, y=240)
         thread = threading.Thread(target=self.get_time, args=(clock,))
         thread.setDaemon(True)
         thread.start()
