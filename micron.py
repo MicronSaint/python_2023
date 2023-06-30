@@ -1,10 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
-import math, time
-import time
-import threading
 from pageFrames import *
-import matplotlib
 from mainWindow import *
 from mainPage import *
 
