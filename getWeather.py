@@ -15,7 +15,7 @@ def getWeather():
         response = requests.get(url,params=params).json()
         # 字典的嵌套取值
         obj = response
-        print(response)
+        #print(response)
     except:
         obj = {
             'error_code': 1,

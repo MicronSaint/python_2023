@@ -8,11 +8,11 @@ from pageFrames import *
 import matplotlib
 
 def get_time(self):
-        clock = Label(self,text='',font=28)
+        clock = Label(self,text='',font=28).pack()
         clock.place(x=25, y=240)
         while True:
             clock.configure(text=time.strftime('%Y-%m-%d %H:%M:%S'))
-            time.sleep(1)
+        time.sleep(1)
 
 class mainWindow(Frame):
     def __init__(self, master=None):
@@ -22,6 +22,7 @@ class mainWindow(Frame):
         self.createPage()
 
     def createPage(self):
+        #get_time(self)
         thread = threading.Thread(target=get_time)
         thread.setDaemon(True)
         thread.start()
