@@ -16,7 +16,6 @@ class mainWindow(Frame):
     def createPage(self):
         clock = Label(self,text='',font=28)
         clock.pack()
-        clock.place(x=25, y=240)
         thread = threading.Thread(target=self.get_time, args=(clock,))
         thread.setDaemon(True)
         thread.start()
